@@ -10,7 +10,7 @@ def T1(energy: float, beta: float, v0: float, dV : float, v1: float, v2 : float)
 
     E = energy*v0
 
-    k2d = beta * sqrt(E/v0)
+    k2d = beta * sqrt(E/v0 - v2/v0)
 
     sin_term = np.sin(k2d)**2
 
@@ -25,7 +25,7 @@ def T2(energy: float, beta: float, v0: float, dV : float, v1: float, v2 : float)
 
     E = energy*v0
 
-    k2d = beta * sqrt(E/v0)
+    k2d = beta * sqrt(E/v0 - v2/v0)
 
     sin_term = np.sinh(k2d)**2
 
